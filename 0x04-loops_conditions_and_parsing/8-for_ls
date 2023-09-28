@@ -3,8 +3,8 @@
 
 for file in *
 do
-  if [ -f $file ] && [[ $file != .* ]]
+  if [ -f "$file" ] && [[ "$file" != .* ]]
   then
-      echo $file | cut -d'-' -f2
+      echo "$file" | cut -d'-' -f 2
   fi
 done
