@@ -2,4 +2,5 @@
 # 2. Show your Bash PID
 # shellcheck disable=SC2009
 
+# # This command will automatically display the process hierarchy.
 ps -axuf | grep "bash"
