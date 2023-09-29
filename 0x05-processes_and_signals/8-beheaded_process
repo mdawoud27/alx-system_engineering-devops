@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# 8. Beheaded process
+
+# 9: This option specifies the SIGKILL signal, which forcefully terminates the process
+# -f: This option tells pkill to search for processes using a pattern
+pkill -9 -f ./7-highlander
