@@ -2,4 +2,4 @@
 # 2. Show your Bash PID
 # shellcheck disable=SC2009
 
-
+ps -axuf | grep "bash"
