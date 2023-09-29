@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # 3. Show your Bash PID made easy
 
-
+# -l: This option tells pgrep to display both the process names and their PIDs in the output.
 pgrep "bash" -l
