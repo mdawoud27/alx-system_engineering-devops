@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 # 1. List your processes
 
+# Explanation of 'ps' command options:
+# -a   : Show processes for all users.
+# -x   : Show processes without a controlling terminal (TTY).
+# -u   : Display a user-oriented format.
+# -f   : Display a full-format listing.
 ps -axuf
