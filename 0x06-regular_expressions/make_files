@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Create the specified files
+touch \
+0-simply_match_school.rb \
+1-repetition_token_0.rb \
+2-repetition_token_1.rb \
+3-repetition_token_2.rb \
+4-repetition_token_3.rb \
+5-beginning_and_end.rb \
+6-phone_number.rb \
+7-OMG_WHY_ARE_YOU_SHOUTING.rb \
+100-textme.rb
+
+# Ruby code to insert into each file
+ruby_code="#!/usr/bin/env ruby\nputs ARGV[0].scan(//).join"
+
+# Iterate through each file in the current directory
+for file in *; do
+    if [[ "$file" == "README.md" || "$file" == "push" ]]
+    then
+      continue
+    fi
+
+    # Check if the item is a file
+    if [[ -f "$file" && "$file" =~ ^[0-9]+-[a-zA-Z0-9_]+\.rb$ ]]
+    then
+        # Open the file in vi and insert the Ruby code
+        echo -e "$ruby_code" > "$file"
+        echo "Ruby code has been inserted into $file"
+        chmod +x *.rb
+    fi
+done
