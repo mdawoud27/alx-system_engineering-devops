@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Script that displays all active IPv4 IPs on the machine it’s executed on.
+#  `ip -4 addr show`: This command uses the ip tool to display information about network interfaces.
+#	The `-4` option specifies IPv4 addresses.
+#	`addr show` shows the address information.
+#  `awk '/inet / {print $2}'`: This cmd used to filter the output
+#	and prints the second field (the actual IP address)
+#  `cut -d '/' -f 1`: This command is used to remove the subnet mask information.
+#	It specifies that the delimiter is '/', and prints the first field.
+
+ip -4 addr show | awk '/inet / {print $2}' | cut -d '/' -f 1
