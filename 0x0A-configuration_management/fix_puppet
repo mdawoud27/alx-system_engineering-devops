@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+file_name=$1
+
+puppet-lint --fix "file_name"
+
+echo "Alignment issues fixed for $file_name"
