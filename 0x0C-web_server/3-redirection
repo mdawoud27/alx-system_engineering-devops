@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script that configure Nginx server so that `/redirect_me`
+#  is redirecting to another page.
+
+sudo apt update
+sudo apt install nginx -y
+
+# Set the redirection configuration
+redirection_config="server_name _;\n\trewrite ^/redirect_me https://github.com/mdawoud27 permanet;"
+
+sudo sed -i "s#server_name _;#$redirection_config#" /etc/nginx/sites-enabled/default
+sudo service nginx restart
