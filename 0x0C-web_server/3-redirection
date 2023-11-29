@@ -5,17 +5,8 @@
 sudo apt-get update
 sudo apt-get install nginx -y
 
-# Set the redirection configuration
-redirection_config="server_name _;\n\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
-
-# Use a different delimiter in sed to avoid issues with '/'
-sudo sed -i "s#server_name _;#$redirection_config#" /etc/nginx/sites-available/default
-
-# Check if the symbolic link already exists
-if [ ! -e /etc/nginx/sites-enabled/default ]; then
-  # Create a symbolic link to enable the site
-  sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-fi
-
-# Restart Nginx to apply the changes
-sudo service nginx restart
+sudo ufw allow 'Nginx HTTP'
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+sudo sed -i '24i\    location /redirect_me {\n        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n    }' /etc/nginx/sites-available/default
+sudo service nginx start
+sudo nginx -s reload
