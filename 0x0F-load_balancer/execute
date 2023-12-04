@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Executing files
+chmod +x *
