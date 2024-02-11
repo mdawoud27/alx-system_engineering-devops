@@ -94,3 +94,6 @@ From the initial *DNS* resolution to the dynamic content delivery facilitated by
 Understanding these intricacies not only enhances our appreciation for the digital landscape but also empowers us to navigate it with confidence and insight.
 
 *So, the next time you enter a URL into your browser, marvel at the intricate journey it embarks on to bring the web to your fingertips.*
+
+![The whole pic](./images/alx-task.png)
+
