@@ -1,6 +1,6 @@
 # What happens when you type `google.com` in your browser and press Enter: From URL to Web Page
 
-Blog Link: [Medium]() || [LinkedIn]()
+Blog Link: [Medium](https://medium.com/@dawoud27/understanding-the-journey-of-a-web-request-from-url-to-web-page-fba784c9e4bf) || [LinkedIn]()
 
 Embarking on a journey through the intricate layers of web browsing reveals the fascinating interplay of technologies that seamlessly deliver content to our screens.
 
