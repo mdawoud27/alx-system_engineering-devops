@@ -1,4 +1,4 @@
-# Demystifying the Journey of a Web Request: From URL to Web Page
+# What happens when you type `google.com` in your browser and press Enter: From URL to Web Page
 
 Blog Link: [Medium]() || [LinkedIn]()
 
