@@ -1,0 +1,16 @@
+sudo apt update
+
+# Installing ufw
+sudo apt install ufw -y
+
+# blocks all incoming traffic, and allow outgoing
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# Allow the following TCP ports
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw allow 80
+
+sudo ufw enable
+echo -e "The task is completed"
