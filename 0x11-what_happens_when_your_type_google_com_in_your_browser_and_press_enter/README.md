@@ -11,7 +11,7 @@ In this article, we will understand the journey of a web request from the *URL a
 ![URL Pic](./images/URL.png) 
 
 ## DNS Request: Gateway to the Internet
-The journey of a web request begins when you enter a URL into your browser.
+*The journey of a web request begins when you enter a URL into your browser.*
 
 - Initially, the browser sends a request to the **Domain Name System (DNS)** to convert the entered *URL address* into an *IP address*. This process helps enable communication with the hosting server of the website you are trying to access.
 
