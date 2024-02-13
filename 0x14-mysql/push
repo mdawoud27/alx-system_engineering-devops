@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Script to push files and dirs to the gitHub
+
+git add .
+git commit -m "${*:1}"
+git push
