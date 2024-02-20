@@ -15,11 +15,9 @@ if __name__ == '__main__':
         f'https://jsonplaceholder.typicode.com/todos/?userId={USER_ID}'
     )
     with open(f'{USER_ID}.csv', 'w') as file:
-        file_writer = writer(file)
-
         for dictionary in tasks_response.json():
-            file_data = [
-                str(USER_ID), str(USERNAME), str(dictionary['completed']),
-                str(dictionary['title'])
-            ]
-            file_writer.writerow(file_data)
+            completed_key = dictionary['completed']
+            title_key = dictionary['title']
+            file.write(
+                f'"{USER_ID}","{USERNAME}","{completed_key}","{title_key}"\n'
+            )
