@@ -15,14 +15,14 @@ if __name__ == '__main__':
         f'https://jsonplaceholder.typicode.com/todos/?userId={USER_ID}'
     )
     with open(f'{USER_ID}.json', 'w') as file:
-        for dictionary in tasks_response.json():
-            json_string = {
-                str(USER_ID): [
-                    {
-                        "task": dictionary['title'],
-                        "completed": dictionary['completed'],
-                        "username": USERNAME,
-                    }
-                ]
-            }
-            file.write(json.dumps(json_string))
+        json_string = {
+            str(USER_ID): [
+                {
+                    "task": dictionary['title'],
+                    "completed": dictionary['completed'],
+                    "username": USERNAME,
+                }
+                for dictionary in tasks_response.json()
+            ]
+        }
+        file.write(json.dumps(json_string))
