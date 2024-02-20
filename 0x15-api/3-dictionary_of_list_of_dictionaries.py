@@ -8,6 +8,7 @@ if __name__ == '__main__':
         f'https://jsonplaceholder.typicode.com/users/'
     )
     with open('todo_all_employees.json', 'w') as file:
+        json_string = {}
         for user in response.json():
             USER_ID = user['id']
             USERNAME = user['username']
@@ -15,14 +16,12 @@ if __name__ == '__main__':
                 f'https://jsonplaceholder.typicode.com/todos/?userId={USER_ID}'
             )
 
-            json_string = {
-                str(USER_ID): [
-                    {
-                        "username": USERNAME,
-                        "task": dictionary['title'],
-                        "completed": dictionary['completed'],
-                    }
-                    for dictionary in tasks_response.json()
-                ]
-            }
+            json_string[str(USER_ID)] = [
+                {
+                    "username": USERNAME,
+                    "task": dictionary['title'],
+                    "completed": dictionary['completed'],
+                }
+                for dictionary in tasks_response.json()
+            ]
             file.write(json.dumps(json_string))
