@@ -16,14 +16,12 @@ if __name__ == '__main__':
     )
     with open(f'{USER_ID}.json', 'w') as file:
         for dictionary in tasks_response.json():
-            completed_key = dictionary['completed']
-            title_key = dictionary['title']
             json_string = {
                 str(USER_ID): [
                     {
                         "task": dictionary['title'],
                         "completed": dictionary['completed'],
-                        "username": USERNAME
+                        "username": USERNAME,
                     }
                 ]
             }
