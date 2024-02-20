@@ -22,7 +22,7 @@ if __name__ == '__main__':
             if key == 'completed' and value is True:
                 NUMBER_OF_DONE_TASKS += 1
                 TASK_TITLE += '\n'
-                TASK_TITLE += '\t'
+                TASK_TITLE += '\t '
                 TASK_TITLE += f"{dictionary['title']}"
 
     print(
