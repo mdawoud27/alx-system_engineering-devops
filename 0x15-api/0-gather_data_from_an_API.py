@@ -26,7 +26,7 @@ if __name__ == '__main__':
                 NUMBER_OF_DONE_TASKS += 1
                 TASK_TITLE += '\n'
                 TASK_TITLE += '\t'
-                TASK_TITLE += dictionary['title']
+                TASK_TITLE += f"{dictionary['title']}"
 
     print(
         f'Employee {EMPLOYEE_NAME} is done with tasks({NUMBER_OF_DONE_TASKS}/'
