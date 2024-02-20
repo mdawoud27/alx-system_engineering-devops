@@ -5,10 +5,7 @@ if __name__ == '__main__':
     import requests
     import sys
 
-    if len(sys.argv) < 2:
-        exit()
-    else:
-        employee_id = sys.argv[1]
+    employee_id = sys.argv[1]
 
     response = requests.get(
         f'https://jsonplaceholder.typicode.com/users/{employee_id}'
