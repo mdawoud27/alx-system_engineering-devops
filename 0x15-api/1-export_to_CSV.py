@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """script to export data in the CSV format."""
 if __name__ == '__main__':
-    from csv import writer
     import requests
     import sys
 
