@@ -2,8 +2,8 @@
 """script that, using REST API, for a given employee ID,
 returns information about his/her Todo list progress."""
 if __name__ == '__main__':
-    import sys
     import requests
+    import sys
 
     if len(sys.argv) < 2:
         exit()
