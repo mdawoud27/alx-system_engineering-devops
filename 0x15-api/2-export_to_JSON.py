@@ -19,7 +19,7 @@ if __name__ == '__main__':
             completed_key = dictionary['completed']
             title_key = dictionary['title']
             json_string = {
-                f"{USER_ID}": [
+                str(USER_ID): [
                     {
                         "task": dictionary['title'],
                         "completed": dictionary['completed'],
