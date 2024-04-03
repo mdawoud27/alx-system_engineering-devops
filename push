@@ -1,4 +1,5 @@
 #!/bin/bash
+# this is script push all files and dirs to gitHub
 
 git add .
 git commit -m "${*:1}"
