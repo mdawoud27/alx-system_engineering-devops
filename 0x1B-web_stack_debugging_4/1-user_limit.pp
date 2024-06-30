@@ -6,6 +6,6 @@ exec { 'increasing hard file':
 }
 
 exec { 'increasing soft file':
-  command => 'sed -i "/holberton soft/s/5/4096" /etc/security/limits.conf',
+  command => 'sed -i "/holberton soft/s/4/4096" /etc/security/limits.conf',
   path    => '/usr/local/bin/:/bin/'
 }
